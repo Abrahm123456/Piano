@@ -37,10 +37,10 @@
 
 .piano-keys{
     background-color: #f2f7f4;
-    width: 5rem;
+    width: 4.5rem;
     cursor: pointer;
     position: relative;
-    height: 20rem;
+    height: 19rem;
     border-radius: 10px;
     border: 1px solid #000;
 }
@@ -48,9 +48,10 @@
 .piano-black-keys{
   background-color: #000;
   height: 12rem;
-  width: 3rem;
+  width: 2.5rem;
   margin-left: -1.5rem;
   margin-right: -1.5rem;
   z-index: 2;
   position: relative;
+  cursor: pointer;
 }
