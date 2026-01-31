@@ -1,8 +1,9 @@
-const keys = document.querySelectorAll('.piano-keys');
-const sound = new Audio('./keysounds/key01.mp3');
-// if code does not work: keys.forEach((key) => { console.log(); });
+const keys = document.querySelectorAll('.piano-keys, piano-black-keys');
+const sound = new Audio('1.mp3');
 
-keys.forEach(key => {
-  key.addEventListener('click', function() 
-  { console.log('Button clicked:', this.textContent); 
-    }); });
+keys.forEach((key) => {
+  key.addEventListener('click',(e) =>{
+    const keyclicked = e.target.dataset.note;
+    sound.src = `${keyclicked}.mp3`;
+    sound.play ();
+  })})
