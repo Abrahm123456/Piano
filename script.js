@@ -1,6 +1,5 @@
 const keys = document.querySelectorAll('.piano-keys, .piano-black-keys');
 const sound = new Audio('{note}.mp3');
-
 keys.forEach((key) => {
   key.addEventListener('click',(e) =>{
     const keyclicked = e.target.dataset.note;

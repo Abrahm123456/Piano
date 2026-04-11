@@ -1,5 +1,32 @@
-@import url(
-"https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+.bottom-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.styled-dropdown {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #333;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: 2px solid #555;
+  cursor: pointer;
+  font-family: Righteous, cursive;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.styled-dropdown:hover {
+  background-color: #555;
+}
+
 
 .body{
     margin: 0;
@@ -10,7 +37,7 @@
 
 .container {
     background-image:
-          linear-gradient(90deg, #0ae7ff, rgb(0 252 17 / 70%));
+    linear-gradient(90deg, #0ae7ff, rgb(0 252 17 / 70%));
     height: 100vh;
     width: 100%;
     display: flex;
