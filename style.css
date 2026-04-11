@@ -1,9 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
+.bottom-bottom-container {
+  position: fixed;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.play-stop-button {
+  background-color: #333;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 8px;
+  border: 2px solid #555;
+  cursor: pointer;
+  font-family: Righteous, cursive;
+  font-size: 0.8rem;
+  transition: background 0.3s;
+}
+
 .bottom-container {
   position: fixed;
-  bottom: 20px;
+  bottom: 42px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
@@ -26,7 +46,6 @@
 .styled-dropdown:hover {
   background-color: #555;
 }
-
 
 .body{
     margin: 0;
