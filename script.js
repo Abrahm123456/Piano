@@ -16,7 +16,7 @@ keys.forEach((key) => {
       sound.src = `Audios/${note}.mp3`;
       sound.currentTime = 0;
       sound.play();
-      await new Promise(resolve => setTimeout(resolve, parseInt(duration)));
+      await new Promise(resolve => setTimeout(resolve, parseInt(duration) * 300));
     }
   }
   const testInput = `
