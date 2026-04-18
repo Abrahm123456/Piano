@@ -13,37 +13,38 @@ keys.forEach((key) => {
     const lines = csvFile.trim().split('\n');
     for (const line of lines) {
       const [note, duration] = line.split(',').map(item => item.trim());
-      sound.src = `Audios/${note}.mp3`;
-      sound.currentTime = 0;
-      sound.play();
+      const beat = new Audio(`Audios/${note}.mp3`);
+      beat.src = `Audios/${note}.mp3`;
+      beat.currentTime = 0;
+      beat.play();
       await new Promise(resolve => setTimeout(resolve, parseInt(duration) * 300));
     }
   }
   const testInput = `
-5,3
+8,3
+6,1
 4,1
-3,1
-4,1
-5,1
-5,1
-5,2
-4,1
-4,1
-4,2
-5,1
+6,1
+8,1
+8,1
+8,2
+6,1
 6,1
 6,2
-5,3
+8,1
+11,1
+11,2
+8,3
+6,1
 4,1
-3,1
-4,1
-5,1
-5,1
-5,2
-4,1
-4,1
-4,1
-5,1
-4,1
-3,3`;
+6,1
+8,1
+8,1
+8,2
+6,1
+6,1
+6,1
+8,1
+6,1
+4,3`;
   playSong(testInput);
