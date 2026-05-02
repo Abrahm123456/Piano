@@ -1,3 +1,5 @@
+const song_dropdown = document.getElementById('songs');
+const play_button = document.getElementById('play-button');
 const keys = document.querySelectorAll('.piano-keys, .piano-black-keys');
 const sound = new Audio('{note}.mp3');
 keys.forEach((key) => {
@@ -20,31 +22,10 @@ keys.forEach((key) => {
       await new Promise(resolve => setTimeout(resolve, parseInt(duration) * 300));
     }
   }
-  const testInput = `
-8,3
-6,1
-4,1
-6,1
-8,1
-8,1
-8,2
-6,1
-6,1
-6,2
-8,1
-11,1
-11,2
-8,3
-6,1
-4,1
-6,1
-8,1
-8,1
-8,2
-6,1
-6,1
-6,1
-8,1
-6,1
-4,3`;
-  playSong(testInput);
+  fetch('mary_had_a_little_lamb.csv')
+    .then(response => response.text())
+    .then(data => {
+      const testInput = data;
+      play_button.addEventListener('click', () => {
+        playSong(testInput);
+      })});;
