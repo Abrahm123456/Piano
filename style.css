@@ -12,18 +12,30 @@
 .play-stop-button {
   background-color: #333;
   color: white;
-  padding: 5px 12px;
-  border-radius: 8px;
+  padding: 10px 15px;
+  border-radius: 15px;
   border: 2px solid #555;
   cursor: pointer;
   font-family: Righteous, cursive;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   transition: background 0.3s;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: fixed;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.play-stop-button:hover {
+  background-color: #555;
 }
 
 .bottom-container {
   position: fixed;
-  bottom: 42px;
+  bottom: 72px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;

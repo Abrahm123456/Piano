@@ -25,7 +25,5 @@ keys.forEach((key) => {
   fetch('mary_had_a_little_lamb.csv')
     .then(response => response.text())
     .then(data => {
-      const testInput = data;
-      play_button.addEventListener('click', () => {
-        playSong(testInput);
-      })});;
+      const testInput = data
+    });
