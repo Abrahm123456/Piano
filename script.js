@@ -25,7 +25,7 @@ keys.forEach((key) => {
       await new Promise(resolve => setTimeout(resolve, parseInt(duration) * 300));
     }
   }
-play_button.addEventListener('click', () => {
+play_button.addEventListener('click', async () => {
   if (isplaying) {
     isplaying = false;
     play_button.textContent = 'Play';
